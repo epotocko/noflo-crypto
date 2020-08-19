@@ -1,5 +1,5 @@
 const noflo = require('noflo');
-console.log(process.env);
+
 try {
 	// Node.js
 	const crypto = require('crypto');
@@ -9,7 +9,6 @@ try {
 		hash.update(data);
 		return Promise.resolve(hash.digest(encoding));
 	}
-	console.log('node.js')
 }
 catch(e) {
 	// Browser
