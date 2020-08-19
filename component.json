@@ -1,17 +1,17 @@
 {
   "name": "crypto",
-  "description": "Wrapper around googlecode's crypto-js",
-  "author": "Kenneth Kan <kenhkan@gmail.com>",
-  "repo": "kenhkan/noflo-crypto",
-  "version": "0.2.2",
+  "description": "Crypto functions for Noflo",
+  "author": "Eddie Potocko <epotocko@gmail.com>",
+  "repo": "epotocko/noflo-crypto",
+  "version": "1.0.0",
   "keywords": [
+		"hash", "crypto", "noflo"
   ],
   "dependencies": {
     "noflo/noflo": "*"
   },
   "scripts": [
-    "components/Parse.coffee",
-    "components/Stringify.coffee",
+    "components/Hash.js",
     "index.js"
   ],
   "json": [
@@ -19,8 +19,7 @@
   ],
   "noflo": {
     "components": {
-      "Parse": "./components/Parse.coffee",
-      "Stringify": "./components/Stringify.coffee"
+      "Hash": "./components/Hash.js"
     }
   }
 }

@@ -1,40 +1,20 @@
-# crypto [![Build Status](https://secure.travis-ci.org/kenhkan/noflo-crypto.png?branch=master)](http://travis-ci.org/kenhkan/noflo-crypto)
+# crypto
 
-Wrapper around googlecode's crypto-js
+Crypto components for noflo
 
 ## Usage
 
-### Parse
+### Hash
 
-Parse a string in a particular encoding into a CryptoJS object.
-
-#### In-ports
-
-  * ENCODING: the encoding, which could be 'Hex', 'Latin1', or 'Utf8'.
-    Default is 'Utf8'.
-  * IN: the incoming string to parse
-
-#### Out-ports
-
-  * OUT: a CryptoJS object
-
-### Stringify
-
-Stringify a CryptoJS object into a string in the desired encoding.
+Calculate a hash of a string
 
 #### In-ports
 
-  * ENCODING: the encoding, which could be 'Hex', 'Latin1', or 'Utf8'
-    Default is 'Utf8'.
-  * IN: A CryptoJS object returned by 'Parse'
+  * IN: the incoming string to calculate the hash of
+  * ALGORITHM: the algorithm to use for the hash
+  * ENCODING: the encoding of the output string (hex or base64). Default is hex
 
 #### Out-ports
 
-  * OUT: a string in the said encoding
+  * OUT: hash as a string
 
-#### Examples
-
-Encode a string in English into Hex string.
-
-    'Hex' -> ENCODING ToHex(crypto/Stringify)
-    'I am so excited to be encoded.' -> IN ToCrypto(crypto/Parse) OUT -> IN ToHex() OUT -> IN Output(Output)
